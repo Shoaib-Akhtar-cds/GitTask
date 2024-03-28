@@ -14,25 +14,41 @@
 #clculate sum of all, difference in 1st and second, product of of 3rd and first, sum divided by third Num
 #display numbers and results of calculation
 
-iNum1 = 0
-iNum2 = 0
-iNum3 = 0
-iNum1 = int(input("Please Enter First Integer Num :"))
-iNum2 = int(input("Please Enter Second Integer Num :"))
-iNum3 = int(input("Please Enter Third Integer Num :"))
+""" Functions"""
+def sumofnums(num1,num2,num3):
+    return(num1+num2+num3)
 
-iSumOfNumbers = 0
-iProductOfNumbers  = 0
-iDifferenceOfNumbers = 0
-fSumDivByThird = 0.0
+def differenceofnums(num1,num2):
+    return(num1-num2)
+
+def productofnums(num1,num2):
+    return(num1*num2)
+
+def divisionofnums(num1,num2):
+    return(round(num1/num2,2))
+
+i_num1 = 0
+i_num2 = 0
+i_num3 = 0
+i_num1 = int(input("Please Enter First Integer Num :"))
+i_num2 = int(input("Please Enter Second Integer Num :"))
+i_num3 = int(input("Please Enter Third Integer Num :"))
+
+i_sum_of_numbers = 0
+i_product_of_numbers  = 0
+i_difference_of_numbers = 0
+f_sum_div_by_third = 0.0
 
 #****** Required Calculations
-iSumOfNumbers = iNum1 + iNum2 + iNum3
-iDifferenceOfNumbers = iNum1 - iNum2
-iProductOfNumbers = iNum1 * iNum3
-fSumDivByThird = round(iSumOfNumbers / iNum3 ,2) #Potential Divide By 0
+i_sum_of_numbers = sumofnums(i_num1,  i_num2, i_num3)
 
-print(f"Sum Of Number {iNum1} , Number {iNum2} and Number {iNum3} is {iSumOfNumbers}")
-print(f"Difference in Number {iNum1} and Number {iNum2} Is {iDifferenceOfNumbers}")
-print(f"Product Of Number {iNum1} and Number {iNum3} Is {iProductOfNumbers}")
-print(f"Sum of Numbers \"{iNum1}\", \"{iNum2}\", \"{iNum3}\" Dividied By \"{iNum3}\" is {fSumDivByThird}" )
+i_difference_of_numbers = differenceofnums( i_num1, i_num2)
+
+i_product_of_numbers = productofnums(i_num1 , i_num3)
+
+f_sum_div_by_third = divisionofnums(i_sum_of_numbers, i_num3 ) #Potential Divide By 0
+
+print(f"Sum Of Number {i_num1} , Number {i_num2} and Number {i_num3} is {i_sum_of_numbers}")
+print(f"Difference in Number {i_num1} and Number {i_num2} Is {i_difference_of_numbers}")
+print(f"Product Of Number {i_num1} and Number {i_num3} Is {i_product_of_numbers}")
+print(f"Sum of Numbers \"{i_num1}\", \"{i_num2}\", \"{i_num3}\" Dividied By \"{i_num3}\" is {f_sum_div_by_third}" )
